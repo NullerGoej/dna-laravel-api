@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 class Item_Category extends Model
 {
     // Define the table associated with the model
-    protected $table = 'item_category';
+    protected $table = 'items_category';
 
     // Define the primary key column name
     protected $primaryKey = 'category_id';

@@ -16,7 +16,7 @@ class Item extends Model
         'description',
         'image',
         'category_id', // 'category_id' is the foreign key of 'id' in 'categories' table
-        
+        'user_id', // 'user_id' is the foreign key of 'id' in 'users' table
     ];
 }
 

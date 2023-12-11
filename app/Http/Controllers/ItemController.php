@@ -15,6 +15,16 @@ class ItemController extends Controller
             return response()->json($items);
         }
 
+        if ($request->has('name')) {
+            $items = Item::where('name', 'like', '%' . $request->input('name') . '%')->get();
+            return response()->json($items);
+        }
+
+        if ($request->has('user_id')) {
+            $items = Item::where('user_id', $request->input('user_id'))->get();
+            return response()->json($items);
+        }
+
         $items = Item::all();
         return response()->json($items);
     }
