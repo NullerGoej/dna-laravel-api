@@ -28,8 +28,10 @@ class AddressController extends Controller
 
     }
 
-    public function show(Address $address)
+    public function show($address_id)
     {
+        $address = Address::find($address_id);
+
         return response()->json($address);
     }
 

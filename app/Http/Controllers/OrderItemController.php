@@ -20,8 +20,10 @@ class OrderItemController extends Controller
         return response()->json($orderItems);
     }
 
-    public function show(Order_Item $orderItem)
+    public function show($order_item_id)
     {
+        $orderItem = Order_Item::find($order_item_id);
+
         return response()->json($orderItem);
     }
 

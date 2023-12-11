@@ -39,8 +39,10 @@ class ItemController extends Controller
 
     }
 
-    public function show(Item $item)
+    public function show($item_id)
     {
+        $item = Item::find($item_id);
+
         return response()->json($item);
     }
 

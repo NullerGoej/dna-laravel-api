@@ -17,10 +17,11 @@ class OrderController extends Controller
         return response()->json($orders);
     }
 
-    public function show(Order $order)
+    public function show($order_id)
     {
-       $order->load('order_items');
-       return response()->json($order);
+        $order = Order::find($order_id);
+
+        return response()->json($order);
     }
     
     public function store(Request $request)

@@ -27,8 +27,10 @@ class ItemCategoryController extends Controller
         return response()->json($itemCategory, 201);
     }
 
-    public function show(Item_Category $itemCategory)
+    public function show($item_category_id)
     {
+        $itemCategory = Item_Category::find($item_category_id);
+
         return response()->json($itemCategory);
     }
 

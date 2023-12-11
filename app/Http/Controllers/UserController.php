@@ -40,8 +40,10 @@ class UserController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show($user_id)
     {
+        $user = User::find($user_id);
+
         return response()->json($user);
     }
 
